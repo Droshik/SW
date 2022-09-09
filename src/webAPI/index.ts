@@ -12,12 +12,13 @@ export const getPersonsList = async (page = 1): Promise<IPersonsList> => {
   });
 };
 
-export const getSinglePersone = async (id: number): Promise<IPerson> => {
+export const getSinglePerson = async (id: number): Promise<IPerson> => {
   return fetch(`https://swapi.py4e.com/api/people/${id}`).then((response) => {
     return response.json();
   });
 };
 
+// just for TS
 export const getSpecieInfo = async (link: string): Promise<ISpecie> => {
   return fetchJSON_get(link);
 };
